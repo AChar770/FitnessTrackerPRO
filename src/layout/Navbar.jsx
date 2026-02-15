@@ -1,5 +1,5 @@
 import { useAuth } from "../auth/AuthContext";
-import { link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 /** Navbar with site navigation links */
 export default function Navbar() {

@@ -5,7 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 /** A form that allows users to log into an existing account. */
 export default function Login() {
   const { login } = useAuth();
-  const navigate = UseNavigate();
+  const navigate = useNavigate();
 
   const [error, setError] = useState(null);
 
@@ -16,7 +16,7 @@ export default function Login() {
     const password = formData.get("password");
     try {
       await login({ username, password });
-      naviagate("activities");
+      navigate("/activities");
     } catch (e) {
       setError(e.message);
     }
@@ -37,7 +37,7 @@ export default function Login() {
         <button>Login</button>
         {error && <p role="alert">{error}</p>}
       </form>
-      <Link to="/register">Don't have an account? Register here.</link>
+      <Link to="/register">Don't have an account? Register here.</Link>
     </>
   );
 }
