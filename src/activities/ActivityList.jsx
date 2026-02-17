@@ -23,7 +23,7 @@ function ActivityListItem({ activity, syncActivities }) {
   return (
     <li>
       <p>
-        <Link to={`/activites/${activity.id}`}> {activity.name}</Link>
+        <Link to={`/activities/${activity.id}`}> {activity.name}</Link>
       </p>
     </li>
   );
